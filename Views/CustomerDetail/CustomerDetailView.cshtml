@@ -1,0 +1,84 @@
+﻿@model onlineWingStore.Models.CustomerDetailTable
+@{
+    ViewBag.Title = "CustomerDetailView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section AfterLogin
+{
+    
+    <li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+
+<html>
+    <body>
+    <div align="center">
+@using (Html.BeginForm("Checkout", "CustomerDetail",FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Customer Details</legend>
+
+        <table>
+            <tr>
+      
+            <td>@Html.LabelFor(model => model.AddressLine1)</td>
+           <td> @Html.EditorFor(model => model.AddressLine1)</td>
+           <td> @Html.ValidationMessageFor(model => model.AddressLine1)</td>
+       
+           </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.AddressLine2)</td>        
+           <td> @Html.EditorFor(model => model.AddressLine2)</td>
+           <td> @Html.ValidationMessageFor(model => model.AddressLine2)</td>
+        </tr>
+            <tr>
+        
+            <td>@Html.LabelFor(model => model.Town)</td>        
+            <td>@Html.EditorFor(model => model.Town)</td>
+            <td>@Html.ValidationMessageFor(model => model.Town)</td>
+        
+       </tr>
+
+       <tr>            
+           <td>@Html.LabelFor(model => model.Region)</td>       
+            <td>@Html.EditorFor(model => model.Region)</td> 
+            <td>@Html.ValidationMessageFor(model => model.Region)</td> 
+           </tr>
+
+             <tr>            
+           <td>@Html.LabelFor(model => model.PostalCode_)</td>       
+            <td>@Html.EditorFor(model => model.PostalCode_)</td> 
+            <td>@Html.ValidationMessageFor(model => model.PostalCode_)</td> 
+           </tr>
+
+             <tr>            
+           <td>@Html.LabelFor(model => model.Country)</td>       
+            <td>@Html.EditorFor(model => model.Country)</td> 
+            <td>@Html.ValidationMessageFor(model => model.Country)</td> 
+           </tr>
+
+        
+
+        <tr>         
+            <td><input type="submit" style="padding-left:20px;" class="btn btn-default" value="Submit" /></td> 
+
+        </tr>
+
+               </table>
+
+       
+    </fieldset>
+}
+</div>
+    </body>
+    </html>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,50 @@
+﻿@model onlineWingStore.Models.AdminTable
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@section AdminMenu
+{
+     <li><a href="/Product/Index">Home</a></li>
+     <li><a href="/Admin/Login">Login</a></li>
+}
+
+<html>
+        <body>
+            
+        
+       	
+      <div align="center">
+        @using (Html.BeginForm("LoginAction", "Admin", FormMethod.Post))
+        {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Login</legend>
+        
+       <table>
+        <tr>
+            <td>@Html.LabelFor(model => model.UserName)</td>
+            <td>@Html.EditorFor(model => model.UserName)</td>
+            <td>@Html.ValidationMessageFor(model => model.UserName)</td>
+            
+       </tr>
+       <tr>
+            <td>@Html.LabelFor(model => model.Password)</td>
+        
+  
+            <td>@Html.EditorFor(model => model.Password)</td>
+            <td>@Html.ValidationMessageFor(model => model.Password)</td>
+           
+       </tr>
+        <tr>
+          <td><input type="submit" style="padding-left:20px;" class="btn btn-default" value="Login" /></td>
+        </tr>
+       </table> 
+    </fieldset>
+}
+</div>      
+
+    </body>
+</html>

@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "SaftyShoes";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+
+@section AdminAfterLogin
+{
+      
+     <li><a href="/Product/Create">Add Product</a></li>
+     <li><a href="/Product/Index">Show All Products</a></li>                                 
+     <li><a href="/Admin/Showresponse">Customer Response</a></li> 
+     <li><a href="/Admin/UploadFile">Upload File</a></li>
+     <li><a href="/Admin/SportsShoes">Sports Shoes</a></li>
+     <li><a href="/Admin/SaftyShoes">Safty Shoes</a></li>
+     <li><a href="/Admin/OtherShoes">Other</a></li>     
+     
+
+}
+
+@section AdminAfterLoginTwo
+{
+    <li><a href="/Admin/AdminMainPage">Home</a></li>
+    <li><a href="/Admin/LogoutAction">Logout</a></li>
+
+}
+<h2>Safty Shoes</h2>
+<html>
+    <body>
+        <div align="center">
+<div class="tab-content" style="display:block;">
+            <div class="items">
+              <div class="cl">&nbsp;</div>
+              <ul>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailone"><img src="~/images/image1.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                    
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailtwo"><img src="~/images/image2.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailthree"><img src="~/images/image3.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailfour"><img src="~/images/image4.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailfour"><img src="~/images/image4.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailthree"><img src="~/images/image3.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailtwo"><img src="~/images/image2.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Admin/Detailone"><img src="~/images/image1.jpg" alt="" /></a> </div>
+                <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+              </ul>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+            </div>
+        </body>
+        </html>

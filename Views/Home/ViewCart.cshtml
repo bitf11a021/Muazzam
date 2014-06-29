@@ -1,0 +1,70 @@
+﻿@model List<onlineWingStore.Models.ProductTable>
+@{
+    ViewBag.Title = "ViewCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section AfterLogin
+{<li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+<h2>View Cart</h2>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+      <div align="center">
+        <p>Products Descriptions</p>
+         
+            <table border="1" style="border-style: solid;margin-left: 60px;margin-top: 30px;border-spacing: 0px" >
+
+     <tr>
+        <th style="width: 182px">Product Name</th>
+          <th style="width: 182px">Product ID</th>
+           <th style="width: 182px">Product Price</th>        
+           <th style="width: 185px">Delete</th>
+        
+    </tr>
+                 
+           
+    @foreach(var v in ViewBag.mydata)
+    {
+   
+    <tr>
+        <td>@v.ProductName </td>
+        <td>@v.ProductId </td>
+        <td>@v.Price</td>
+        
+        @*<td><input type="submit" value="Remove"/></td>*@
+        <td><a href="/Home/DeleteProduct/@v.ProductId"><input type="button" value="Remove"/></a></td>
+        
+       @* <td><input id="productID" name="@v.ProductId" type="hidden" value=@v.ProductId/></td>
+        <td><input id="name" name="@v.ProductName" type="hidden" value=@v.ProductName /></td>
+        <td><input id="price" name="@v.Price" type="hidden" value=@v.Price/></td>*@
+
+        
+     </tr>
+        
+        
+               
+    }
+                
+               
+                </table>
+
+          
+
+         
+          </div>
+        <div align="center">
+            
+                        <a href="/Home/UserMainPage" style="padding-right: 20px"><input type="button" class="btn btn-default" value="Continue Shoping"/></a>
+                    
+                    
+                        <a href="/CustomerDetail/CustomerDetailView" style="padding-right: 20px"><input type="button" class="btn btn-default" value="Check Out"/></a>
+                  
+        </div>
+    </body>
+</html>

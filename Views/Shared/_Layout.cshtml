@@ -1,0 +1,237 @@
+﻿    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+   
+    
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+
+        <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+         <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+       <title> Wing Store</title>
+        <link href="~/Content/style.css" rel='stylesheet' type='text/css' />
+		<link href="~/Content/bootstrap.min.css" rel='stylesheet' type='text/css' />
+		<link href="~/Content/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="~/Content/theme.css" rel='stylesheet' type='text/css' />
+
+          
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+		</script>
+		
+		<!----webfonts---->
+		<link href="~/fonts" rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+		<!--  jquery plguin -->
+	<!--start slider -->
+	    <link rel="stylesheet" href="~/Content/fwslider.css" media="all">
+		<script src="~/Scripts/jquery-ui.min.js"></script>
+		<script src="~/Scripts/css3-mediaqueries.js"></script>
+		<script src="~/Scripts/fwslider.js"></script>
+	<!--end slider -->
+
+
+
+
+   
+    <script>
+        $(document).ready(function () {
+
+            $('#checking').hide();
+            $('#searchbtnid').click(function () {
+                console.log("inside click");
+                var product = $('#ProductName').val();
+                $('#checking').show();
+                $.getJSON("/Home/CheckProduct?ProductName=" + product, function (data) {
+                    console.log("data" + data);
+                    $('#checking').hide();
+                    if (data) {
+                        $('#pid').text("Product ID  " + data.ProductId);
+                        $('#pn').text("Product Name " + data.ProductName);
+                        $('#p').text("Product Price" + data.Price);
+                        $('#ps').text("Product Size" + data.Size);
+                        $('#pq').text("Product Quantity" + data.Quantity);
+                    }
+                    else {
+                        $('#res').text("Product Not Exists");
+                    }
+
+                });
+            });
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+        <!----start-container----->
+        <div class="header-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="logo"><a href="index.html">
+                            <img src="../images/logo.png" alt="" /></a></div>
+                    </div>
+                    <div class="col-md-8">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <span class="text-left"><a href="#">MENU</a></span>
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <div class="btn-group show-on-hover">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                    Categories<span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="/Home/SportsShoes">Sports Shoes</a></li>
+                                                    <li><a href="/Home/SaftyShoes">Safty Shoes</a></li>
+                                                    <li><a href="/Home/MyAccount">MyAccount</a></li>
+                                                   
+                                                    <li><a href="/Home/OtherShoes">Other</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                         @RenderSection("AfterLogin", required: false);
+                                         @RenderSection("Menu", required: false);  
+                                                                            
+                                       </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                            </div>
+                            <!-- /.container-fluid -->
+                        </nav>
+
+                        <div class="right">
+                            <ul class="list-unstyled">
+                                <li class="a text-left"><img src="../images/cart.png" alt="" /><a href="/Home/ViewCart">View Cart</a></li>
+                                <li><a href="/CustomerDetail/CustomerDetailView">Checkout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!----start-images-slider---->
+                    <!-- Single button -->
+
+                </div>
+            </div>
+        </div>         <!----start-images-slider---->
+        <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+           <!----start-images-slider---->
+        <!----start-images-slider---->
+		<div class="images-slider">
+		    <div id="fwslider">
+		        <div class="slider_container">
+		            <div class="slide"> 
+		                    <img src="~/Images/img.jpg" alt=""/>
+		                <div class="slide_content">
+		                    <div class="slide_content_wrap">
+		                         <p class="description">New Arrivals</p>
+		                        <h4 class="title">Shoes</h4>	
+		                         <p class="description"><a href="#">Browse collection</a></p>	                      
+		                        <div class="slide-btns description">		            	                      
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>		        
+		            <div class="slide">
+		                <img src="~/Images/img.jpg" alt=""/>
+		                <div class="slide_content">
+		                     <div class="slide_content_wrap">		                   
+		                         <p class="description">New Arrivals</p>
+		                        <h4 class="title">Shoes</h4>	 
+		                         <p class="description"><a href="#">Browse collection</a></p>	 	                       		                       
+		                        <div class="slide-btns description">		                      
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <!--/slide -->
+		        
+                </div>
+		        <div class="timers"> </div>
+		        <div class="slidePrev"><span> </span></div>
+		        <div class="slideNext"><span> </span></div>
+		    </div>
+		    <!--/slider -->
+		</div>
+<!----//End-container----->
+            	</div>
+        </div>
+    </div>
+
+      
+       
+          
+
+        @RenderSection("featured", required: false)
+
+
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+      
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-inline pull-left">
+                        <li><a href="/Home/Terms">Terms of Services</a></li>
+                        <li><a href="/Home/Terms">Refunds</a></li>
+                        <li><a href="/Home/Terms">Privacy Policy</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="/Home/Contact">Contact</a></li>
+                    </ul>
+                    <form class="navbar-form pull-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="ProductName" name="ProductName" placeholder="Search">
+                        </div>
+
+                        <input type="button" id="searchbtnid" class="btn btn-default" value="Find" />
+
+                        <div>
+                            <div id="checking">checking...</div>
+                            <div id="pid"></div>
+                            <div id="pn"></div>
+                            <div id="p"></div>
+                            <div id="ps"></div>
+                            <div id="pq"></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="copy-right text-center">
+                <p>&#169Copyright 2014 All Rights Reserved  Template <a href="#">Yolk</a></p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

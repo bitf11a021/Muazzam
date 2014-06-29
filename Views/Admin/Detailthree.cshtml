@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Detailthree";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+
+}
+
+@section AdminAfterLogin
+{
+      
+     <li><a href="/Product/Create">Add Product</a></li>
+     <li><a href="/Product/Index">Show All Products</a></li>                                 
+     <li><a href="/Admin/Showresponse">Customer Response</a></li> 
+     <li><a href="/Admin/UploadFile">Upload File</a></li>
+     <li><a href="/Admin/SportsShoes">Sports Shoes</a></li>
+     <li><a href="/Admin/SaftyShoes">Safty Shoes</a></li>
+     <li><a href="/Admin/OtherShoes">Other</a></li>     
+     
+
+}
+
+@section AdminAfterLoginTwo
+{
+    <li><a href="/Admin/AdminMainPage">Home</a></li>
+    <li><a href="/Admin/LogoutAction">Logout</a></li>
+
+}
+<html>
+    <head><title>Details</title></head>
+    <body>
+        <table border="5">
+        <div>
+    <div style="border: 0px solid #BBBBBB;margin-left: 55px;margin-top: 50px;font-family: Calibri;width: 300px;float: left;border-style: dashed">
+        <!--helper function for displaying the product details-->
+             <table border="1" style="border-spacing: 0px;font-size: 20px;border-color: #BBBBBB">
+         <tr style="height: 40px">
+             <td style="width: 150px">Brand Name </td>
+             <td style="width: 150px">Adidas</td>
+         </tr>
+        <tr style="height: 40px">
+             <td style="width: 150px">View</td>
+             <td style="width: 150px">
+                 
+                 <img src="~/images/image3.jpg"  height="100px" width="100px"/></td>
+         </tr>
+        <tr style="height: 40px">
+             <td style="width: 150px">Price</td>
+             <td style="width: 150px">53 USD</td>
+         </tr>
+        <tr style="height: 40px">
+             <td style="width: 150px">Description</td>
+             <td style="width: 150px">Good for Every Age People, 
+Comfortable, 
+
+Good quality</td>
+         </tr>
+    </table>
+
+    </div>
+   
+</div>   
+         
+
+    </body>
+</html>
+
+

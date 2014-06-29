@@ -1,0 +1,95 @@
+﻿@model onlineWingStore.Models.CustomerFeedBackTable
+@{
+    ViewBag.Title = "Contact";
+}
+@section AfterLogin
+{
+    <li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+@*<html>
+    <body>
+        
+        <div align="center">
+        @using (Html.BeginForm("ContactAction", "Home", FormMethod.Post))
+        {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Contact</legend>
+        
+        
+        
+     <table>
+            <tr>
+      
+            <td>@Html.LabelFor(model => model.Name)</td>
+           <td> @Html.EditorFor(model => model.Name)</td>
+           <td> @Html.ValidationMessageFor(model => model.Name)</td>
+       
+           </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.Email)</td>        
+           <td> @Html.EditorFor(model => model.Email)</td>
+           <td> @Html.ValidationMessageFor(model => model.Email)</td>
+        </tr>
+            <tr>
+        
+            <td>@Html.LabelFor(model => model.Views)</td>        
+            <td>@Html.EditorFor(model => model.Views)</td>
+            <td>@Html.ValidationMessageFor(model => model.Views)</td>
+        
+       </tr>
+
+
+        <tr>         
+            <td><input type="submit" style="padding-left:20px;" class="btn btn-default" value="Submit" /></td> 
+
+        </tr>
+
+               </table>
+       
+    </fieldset>
+}
+</div>      
+    </body>
+</html>
+*@
+
+
+
+<h2>Contact Us</h2>
+       	     <form class="form-horizontal" role="form" action="/Home/ContactAction">
+       	     	 <div class="form-group">
+				    <label for="inputmane3" class="col-sm-2 control-label">Name</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" name="Name" id="name" placeholder="name" required>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+				    <div class="col-sm-10">
+				      <input type="email" class="form-control" name="Email" id="inputEmail3" placeholder="Email" required>
+				    </div>
+				  </div>
+				  
+				  <div class="form-group">
+				    <label for="inputPassword3"  class="col-sm-2 control-label">Message</label>
+				    <div class="col-sm-10">
+                    <input type="text" class="form-control" name="Views" placeholder="Your Message*" required>
+				    
+				    </div>
+				  </div>		
+				  <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				      <button type="submit" class="btn btn-default">Submit</button>
+				    </div>
+				  </div>
+			  </form>
+       
+

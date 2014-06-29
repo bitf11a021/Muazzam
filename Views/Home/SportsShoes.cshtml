@@ -1,0 +1,85 @@
+﻿@model onlineWingStore.Models.ProductTable
+@{
+    ViewBag.Title = "SportsShoes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@section AfterLogin
+{
+   <li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+ }
+<h2>Sports Shoes</h2>
+<html>
+    <body>
+        <div align="center">
+<div class="tab-content" style="display:block;">
+            <div class="items">
+              <div class="cl">&nbsp;</div>
+              <ul>
+                <li>
+                  <div class="image"> <a href="/Home/Detailone"><img src="~/images/image1.jpg" alt="" /></a> </div>
+                  <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                    
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailtwo"><img src="~/images/image2.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailthree"><img src="~/images/image3.jpg" alt="" /></a> </div>
+                  <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailfour"><img src="~/images/image4.jpg" alt="" /></a> </div>
+                  <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailfour"><img src="~/images/image4.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailthree"><img src="~/images/image3.jpg" alt="" /></a> </div>
+                  <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailtwo"><img src="~/images/image2.jpg" alt="" /></a> </div>
+                  <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+                <li>
+                  <div class="image"> <a href="/Home/Detailone"><img src="~/images/image1.jpg" alt="" /></a> </div>
+                 <p> Item Number: <span>@ViewBag.mainpagedata3.ProductId </span><br />
+                    Size List : <span>@ViewBag.mainpagedata3.size</span><br />
+                    Brand Name: <a href="#">@ViewBag.mainpagedata3.ProductName</a> </p>
+                  <p class="price">Wholesale Price: <strong>@ViewBag.mainpagedata3.Price USD</strong></p>
+                </li>
+              </ul>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </div>
+
+            </div>
+        </body>
+        </html>

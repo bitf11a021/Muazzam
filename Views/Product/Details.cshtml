@@ -1,0 +1,73 @@
+﻿@model onlineWingStore.Models.ProductTable
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@section AdminAfterLogin
+{
+      
+     <li><a href="/Product/Create">Add Product</a></li>
+     <li><a href="/Product/Index">Show All Products</a></li>                                 
+     <li><a href="/CustomerFeedBack/Index">Customer Response</a></li> 
+     <li><a href="/Admin/UploadFile">Upload File</a></li>
+     <li><a href="/Admin/SportsShoes">Sports Shoes</a></li>
+     <li><a href="/Admin/SaftyShoes">Safty Shoes</a></li>
+     <li><a href="/Admin/OtherShoes">Other</a></li>     
+     
+
+}
+
+@section AdminAfterLoginTwo
+{
+    <li><a href="/Admin/AdminMainPage">Home</a></li>
+    <li><a href="/Admin/LogoutAction">Logout</a></li>
+
+}
+<h2>Details</h2>
+<div align="center">
+
+<fieldset>
+    <legend>ProductTable</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.size)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.size)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.ProductId  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+    </div>

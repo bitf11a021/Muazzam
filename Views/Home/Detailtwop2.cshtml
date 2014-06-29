@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Detailtwop2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section AfterLogin
+
+{<li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+<h2>Detailtwop2</h2>
+<html>
+    <head><title>Details</title></head>
+    <body>
+         <form method="post" action="/Home/AddToCart" enctype="multipart/form-data">
+        <table border="5">
+        <div>
+    <div style="border: 0px solid #BBBBBB;margin-left: 55px;margin-top: 50px;font-family: Calibri;width: 300px;float: left;border-style: dashed">
+        <!--helper function for displaying the product details-->
+             <table border="1" style="border-spacing: 0px;font-size: 20px;border-color: #BBBBBB">
+         <tr style="height: 40px">
+             <td style="width: 150px">Brand Name </td>
+             <td style="width: 150px">Adidas</td>
+         </tr>
+        <tr style="height: 40px">
+             <td style="width: 150px">View</td>
+             <td style="width: 150px">
+                 
+                 <img src="~/images/t4.jpg"  height="100px" width="100px"/></td>
+         </tr>
+        <tr style="height: 40px">
+             <td style="width: 150px">Price</td>
+             <td style="width: 150px">53 USD</td>
+         </tr>
+        <tr style="height: 40px">
+             <td style="width: 150px">Description</td>
+             <td style="width: 150px">Good for Every Age People, 
+Comfortable, 
+
+Good quality</td>
+         </tr>
+    </table>
+        
+
+    <div style="float: right">
+    
+        <!--adding product to cart-->
+           <fieldset style="margin: 40px 40px 40px 40px;font-family: Calibri;font-size: 20px;color: green;width: 520px">
+                    <legend style="font-family: Calibri;font-size: 25px;">Place Order</legend>
+                    
+                   <input type="submit" value="ADD To Cart"/>
+
+                    <input id="productID" name="ProductId" type="hidden" value="125515"/>
+                    <input id="name" name="ProductName" type="hidden" value="Adidas"/>
+                    <input id="price" name="Price" type="hidden" value="53 USD" />
+                    <input id="size" name="size" type="hidden"/>
+                    <input id="qunatity" name="Quantity" type="hidden" value="1"/>
+               </fieldset>
+             
+     </div> 
+         </form>
+
+    </body>
+</html>

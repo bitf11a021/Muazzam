@@ -1,0 +1,82 @@
+﻿@model IEnumerable<onlineWingStore.Models.ProductTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@section AdminAfterLogin
+{
+      
+     <li><a href="/Product/Create">Add Product</a></li>
+     <li><a href="/Product/Index">Show All Products</a></li>                                 
+     <li><a href="/CustomerFeedBack/Index">Customer Response</a></li> 
+     <li><a href="/Admin/UploadFile">Upload File</a></li>
+     <li><a href="/Admin/SportsShoes">Sports Shoes</a></li>
+     <li><a href="/Admin/SaftyShoes">Safty Shoes</a></li>
+     <li><a href="/Admin/OtherShoes">Other</a></li>     
+     
+
+}
+
+@section AdminAfterLoginTwo
+{
+    <li><a href="/Admin/AdminMainPage">Home</a></li>
+    <li><a href="/Admin/LogoutAction">Logout</a></li>
+
+}
+
+<h2>All Products</h2>
+
+<p>
+    @Html.ActionLink("Click To ADD Products", "Create")
+</p>
+<div align="center">
+<table align="center" border="4">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ProductId  })
+        </td>
+    </tr>
+}
+
+</table>
+    </div>

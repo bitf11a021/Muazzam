@@ -1,0 +1,71 @@
+﻿@model IEnumerable<onlineWingStore.Models.CustomerFeedBackTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@section AdminAfterLogin
+{
+      
+     <li><a href="/Product/Create">Add Product</a></li>
+     <li><a href="/Product/Index">Show All Products</a></li>                                 
+     <li><a href="/Admin/Index">Customer Response</a></li> 
+     <li><a href="/Admin/UploadFile">Upload File</a></li>
+     <li><a href="/Admin/SportsShoes">Sports Shoes</a></li>
+     <li><a href="/Admin/SaftyShoes">Safty Shoes</a></li>
+     <li><a href="/Admin/OtherShoes">Other</a></li>     
+     
+
+}
+
+@section AdminAfterLoginTwo
+{
+    <li><a href="/Admin/AdminMainPage">Home</a></li>
+    <li><a href="/Admin/LogoutAction">Logout</a></li>
+
+}
+
+<h2>Customers Feed Back</h2>
+<div align="center">
+<table border="3">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ViewId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Views)
+        </th>
+        <th>   
+               Operations
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViewId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Views)
+        </td>
+        <td>
+           
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ViewId  })
+        </td>
+    </tr>
+}
+
+</table>
+    </div>

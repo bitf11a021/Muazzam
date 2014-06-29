@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section AfterLogin
+{
+    <li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+<h2>MyAccount</h2>
+<div align="center">
+<table border="1" style="border-style: solid;margin-left: 60px;margin-top: 30px;border-spacing: 0px" >
+    <tr>
+        <td align="center">User Name</td>
+        <td align="center">Email</td>
+        <td align="center">Phone Number </td>
+        <td align="center">Password</td>
+        
+    </tr>
+       
+    <tr>
+        <td align="center">@ViewBag.mydata.UserName </td>
+        <td align="center">@ViewBag.mydata.Email </td>
+        <td align="center">@ViewBag.mydata.Phone</td>
+        <td align="center">@ViewBag.mydata.Password</td>
+       
+
+    </tr>
+    
+</table>
+    </div>

@@ -1,0 +1,31 @@
+﻿@model onlineWingStore.Models.CustomerFeedBackTable
+@{
+    ViewBag.Title = "Showresponse";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Customers Feed Back</h2>
+<html>
+    <head><title></title></head>
+    <body>
+         <table border="1">
+    <tr>
+        <td>View ID</td>
+        <td>NAME</td>
+        <td>EMAIL ID</td>
+        <td>COMMENTS</td>
+       
+    </tr>
+    @foreach(var v in ViewBag.mydata)
+   
+    { <tr>
+        <td>@v.ViewId</td>
+        <td>@v.Name</td>
+        <td>@v.Email </td>
+        <td>@v.Views</td>
+            
+    </tr>
+    }
+</table>
+    </body>
+</html>

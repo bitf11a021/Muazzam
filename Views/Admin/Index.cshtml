@@ -1,0 +1,150 @@
+﻿@model IEnumerable<onlineWingStore.Models.AdminTable>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+@section AdminMenu
+{
+     <li><a href="/Product/Index">Home</a></li>
+     <li><a href="/Admin/Login">Login</a></li>
+}
+<div class="container">
+ <div class="content">	
+ <div class="row">
+ 	<div class="col-md-12 text-center">
+ 		<h2>Featured Products</h2>
+ 	</div>	
+ </div>	
+<div class="row">
+				<div class="col-md-2">
+					<div class="grid">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							     <img src="~/images/cont2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="~/images/link-ico.png" alt=""/></h2>
+							  	</div></a>
+			                </div>
+					    </div>		
+						<p class="text-center">@ViewBag.mainpagedata1.ProductName</p>
+						<h2 class="text-center">$@ViewBag.mainpagedata1.Price</h2>
+						<p class="text-center"><a href="/Home/Detailonep1">Buy</a></p>
+                    </div>
+				</div>
+				
+				<!----start-model-box---->
+						<a data-toggle="modal" data-target=".bs-example-modal-md" href="#"> </a>
+						<div class="modal fade bs-example-modal-md light-box" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-md">
+						    <div class="modal-content light-box-info">
+						    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="images/close.png" title="close" /></button>
+						     <h3>Place Yours content here</h3>
+						     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas orci et blandit dictum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque posuere diam et est hendrerit, eget sodales lectus tincidunt. Etiam suscipit orci sapien, at molestie lorem imperdiet vitae. Fusce nunc eros, congue non hendrerit sed, lobortis scelerisque magna. Ut in nunc sem. Integer bibendum enim et erat molestie, sed interdum nisl ultricies. In hac habitasse platea dictumst. Nullam sem diam, tincidunt dapibus tellus pulvinar, pulvinar tempus dui. Integer eu faucibus arcu. Duis adipiscing commodo ipsum dapibus elementum.</p>
+						    </div>
+						  </div>
+						</div>
+						<!----start-model-box---->
+				
+				<div class="col-md-2">
+					<div class="grid">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							     <img src="~/images/cont2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="~/images/link-ico.png" alt=""/></h2>
+							  	</div></a>
+			                </div>
+					    </div>		
+						<p class="text-center">@ViewBag.mainpagedata1.ProductName</p>
+						<h2 class="text-center">$@ViewBag.mainpagedata1.Price</h2>
+						<p class="text-center"><a href="/Home/Detailonep1">Buy</a></p>
+                    </div>
+				</div>
+				<div class="col-md-2">
+					<div class="grid">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							     <img src="~/images/cont3.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="~/images/link-ico.png" alt=""/></h2>
+							  	</div></a>
+			                </div>
+					    </div>		
+						<p class="text-center">@ViewBag.mainpagedata2.ProductName</p>
+						<h2 class="text-center">$@ViewBag.mainpagedata2.Price</h2>
+						<p class="text-center"><a href="/Home/Detailtwop3">Buy</a></p>
+                    </div>
+				</div>
+				<div class="col-md-2">
+					<div class="grid">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							     <img src="~/images/cont3.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="~/images/link-ico.png" alt=""/></h2>
+							  	</div></a>
+			                </div>
+					    </div>		
+						<p class="text-center">@ViewBag.mainpagedata2.ProductName</p>
+						<h2 class="text-center">$@ViewBag.mainpagedata2.Price</h2>
+						<p class="text-center"><a href="/Home/Detailtwop3">Buy</a></p>
+                    </div>
+				</div>
+				<div class="col-md-2">
+					<div class="grid">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a data-toggle="modal" data-target=".bs-example-modal-md" href="#" class="b-link-stripe b-animate-go  thickbox">
+							     <img src="~/images/cont2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="~/images/link-ico.png" alt=""/></h2>
+							  	</div></a>
+			                </div>
+					    </div>					  	
+						<p class="text-center">@ViewBag.mainpagedata1.ProductName</p>
+						<h2 class="text-center">$@ViewBag.mainpagedata1.Price</h2>
+						<p class="text-center"><a href="/Home/Detailtwop3">Buy</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+				</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="top">
+	<div class="row">
+					<div class="col-md-4">
+						<div class="grid">
+							<h2>About Us</h2>
+					       <p> Wing Shopping is a best way to discover the new things around you.. To find out the rates and to buy things on resonable price. 
+                               You donot have to spend time for going o a shop and putting your effort. Our motive "Save time, Have more". You can find here almost everything on low cost as compare to the market rates. Alot of variety is present here. Try our things. We have been providing ths service since 2005. and our current rank is amonst the top 10 Ecommerce sites and businesses </p>
+	                    </div>
+					</div>
+					<div class="col-md-4">
+						<div class="grid">
+							<h2>Our Blog</h2>
+					        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas orci et blandit dictum. Interdum et malesuada fames ac ante ipsum primis in faucibus Quisque posuere diam et est hendrerit, eget sodales lectus.</p>
+	                    </div>
+					</div>
+					<div class="col-md-4">
+						<div class="grid1 pull-left">
+							<h2>Contact</h2>
+					        <address>
+					        	<p>Name: Muazzam Abbas</p>
+					        	<p>Roll No BITF11A027</p>
+					        	<p>03218858069</p>					        	
+					        	<p>Addesss:Wapda Town</p>
+					        </address>
+	                    </div>
+	                    <div class="grid2 pull-right">
+							<div class="social-icons-set">
+									<ul>
+										<li><a class="facebook" href="#"> </a></li>
+										<li><a class="twitter" href="#"> </a></li>
+										<li><a class="vimeo" href="#"> </a></li>								
+										<div class="clear"> </div>
+									</ul>
+								</div>
+	                    </div>
+					</div>
+					<div class="clearfix"></div>
+	</div>
+</div>
+</div>
+

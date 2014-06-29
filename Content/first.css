@@ -1,0 +1,53 @@
+h1{
+color:white;
+}
+body{ 	background-color:green;
+		background-image:url(images.jpg);
+		
+	}
+
+
+td
+{
+	color:white;
+	text:"bold";
+	border="5";
+}
+
+
+p
+{text-align:center;
+ font-size:25px;
+
+color:white;
+}
+p1
+{
+ font-size:20px;
+
+color:white;
+}
+p2
+{
+ font-size:20px;
+
+color:white;
+}
+.myButton {
+	
+		
+		height:40px; 
+		width:100px;
+		border:5px ;solid green;
+		
+}
+
+span
+{
+color:white;
+
+}
+font
+{
+color = white;
+}

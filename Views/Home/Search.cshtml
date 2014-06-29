@@ -1,0 +1,60 @@
+﻿@model onlineWingStore.Models.ProductTable
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section AfterLogin
+{<li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+<h2>Search Product</h2>
+<html>
+    <head>
+        <title></title>
+      <script>
+            $(document).ready(function () {
+
+                $('#checking').hide();
+                $('#searchbtnid').click(function () {
+                    console.log("inside click");
+                    var product = $('#ProductName').val();
+                    $('#checking').show();
+                    $.getJSON("/Home/CheckProduct?ProductName=" + product, function (data) {
+                        console.log("data" + data);
+                        $('#checking').hide();
+                        if (data) {
+                            $('#pid').text("Product ID  " + data.ProductId);
+                            $('#pn').text("Product Name " + data.ProductName);
+                            $('#p').text("Product Price"  + data.Price);
+                            $('#ps').text("Product Size"  + data.Size);
+                            $('#pq').text("Product Quantity"+ data.Quantity);
+                        }
+                        else {
+                            $('#res').text("Product Not Exists");
+                        }
+
+                    });
+                });
+
+            });
+
+    </script>
+
+    </head>
+<body>
+  
+    <div>
+                    <div id="checking">checking...</div>
+                    <div id="pid"></div>
+                     <div id="pn"></div>
+                     <div id="p"></div>
+                      <div id="ps"></div>
+                      <div id="pq"></div>                   
+
+     </div>
+
+
+    </body>
+    </html>

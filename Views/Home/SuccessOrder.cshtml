@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "SuccessOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section AfterLogin
+{ <li><a href="/Home/UserMainPage">Home</a></li>
+    <li><a href="/Home/Contact">Contact</a></li>
+    <li><a href="/Home/LogoutAction">Logout</a></li>
+}
+<h2>Success Order</h2>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SuccessOrder</title>
+</head>
+<body>
+    <div align="center">
+        <p>
+            <h1>Your Order is Successfuly Place</h1>
+        </p>
+    </div>
+    <div align="center">
+    <div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-10">
+				      <a href="/Home/UserMainPage"> <button  class="btn btn-default">Back To Main Page</button></a>
+				    </div>
+				  </div>
+        </div>
+</body>
+</html>
+
